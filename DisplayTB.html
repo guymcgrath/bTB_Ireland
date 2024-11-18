@@ -1,0 +1,241 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-IE link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><u><span style='font-size:16.0pt;line-height:107%'>DisplayTB
+V01</span></u></b></p>
+
+<p class=MsoNormal>This mapping dashboard was created by CVERA, UCD <a
+href="https://www.ucd.ie/cvera/">https://www.ucd.ie/cvera/</a> as part of a
+research program into Bovine Tuberculosis (bTB) being conducted by the Centre
+for the Department of Agriculture, Food and the Marine (DAFM). The National TB
+Forum highlighted the need for DAFM to communicate area risk of bTB to farmers.
+As such, CVERA have created an interface to allow stakeholders to view the
+current and recent bTB status of herds in their area of interest. Please note, this
+is an ongoing research project and the content is likely to change over time.
+The values presented are compiled by CVERA from data snapshots provided by
+DAFM. This may result in some errors of interpretation and may not account for
+errors of corrections in the source data held by DAFM. For this reason, the dashboard
+is considered only a research prototype and should not be used for official
+reporting purposes.</p>
+
+<p class=MsoNormal>To protect the identity of individual farmers, a process was
+developed to aggregate farms into larger spatial units. A conventional grid square
+approach is unsuitable for this because of the variation in farm sizes across
+the country. Instead, a new spatial aggregation methodology was devised. The centroid
+of the largest fragment of land for each farm in Ireland was generated (for all
+active farms having livestock from January 2019 to December 2023). From this,
+all area in Ireland was split up evenly between these centroids through a
+process called Tessellation. This creates ‘Thiessen polygons’ for every farm
+(Figure 1).</p>
+
+<p class=MsoNormal><img border=0 width=555 height=448 id="Picture 8"
+src="DisplayTB_files/image001.png"
+alt="A pattern of hexagons and dots&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal><i><span style='font-size:10.0pt;line-height:107%'>Figure 1.
+Sample of Thiessen polygons created around the centroid of the largest fragment
+of land per farm for all farms in Ireland (herds classed as ‘active’ from
+January 2019 to December 2023).</span></i></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>These synthetic farm shapes were then merged into larger
+areas ensuring that there were at least 5 farms in each shape (using ‘GHS-SmartDissolve’
+<a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC122055">https://publications.jrc.ec.europa.eu/repository/handle/JRC122055</a>
+) (Figure 2)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img border=0 width=552 height=462 id="Picture 7"
+src="DisplayTB_files/image002.png"
+alt="A blue and white pattern with dots&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal><i><span style='font-size:9.0pt;line-height:107%'>Figure 2. Herds
+collapsed into spatial units ensuring 5 or more herds for each unit.</span></i></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The bTB herd histories were then summarised for each herd into
+the spatial unit in which they were assigned.</p>
+
+<p class=MsoNormal>The dashboard is located at:</p>
+
+<p class=MsoNormal><a
+href="https://www.arcgis.com/apps/dashboards/9306f7eb60b1401a8b18f76f61f20aea"
+target="_blank">https://www.arcgis.com/apps/dashboards/9306f7eb60b1401a8b18f76f61f20aea</a></p>
+
+<p class=MsoNormal>The dashboard can be viewed both in ‘Desktop’ mode an ‘Mobile’
+mode.</p>
+
+<p class=MsoNormal><u>In Desktop Mode:</u></p>
+
+<p class=MsoNormal>The map window displays new breakdowns in the last 12 months.
+The dashboard items show the values of “new breakdowns in the last 12 months”
+and “new breakdowns in the last 3 months” with an additional table displaying
+the number of reactors over the last 5 years. The values update to reflect the
+extent of the map window (that is, they update with zooming to represent the values
+in the area on the map screen). An individual area can be ‘clicked’ to display
+detailed information including the number of herds in that spatial unit, the
+number of animals and the bTB testing information (see bottom of page). A rectangular
+selection can also be made to select one or more area units with the dashboard
+reflecting the selection. The selection must be removed to go back to viewing
+the values in the map window extent. The background can be changed from imagery
+to conventional maps and the foreground map can be turned off. Addresses can be
+looked up in the search window, as can EIRCODE. The legend can be made visible
+but does not appear as default.</p>
+
+<p class=MsoNormal><u>In Mobile Mode:</u></p>
+
+<p class=MsoNormal>Mobile mode is as above but without the table displaying
+reactor history. Users can opt to use their mobile device location. Click and
+select tools are available in mobile mode although the small screen size can
+make detailed selections difficult.</p>
+
+<p class=MsoNormal>No information on user access is recorded by UCD, CVERA
+other than a count of views.</p>
+
+<p class=MsoNormal>This dashboard will be subject to continuous change and
+updates. Bookmark the page in your browser for future reference.</p>
+
+<p class=MsoNormal>For any additional information, please contact <a
+href="mailto:cvera@ucd.ie">cvera@ucd.ie</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Table items include:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Number of herds per spatial unit</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Number of animals per spatial unit per year</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Number of ‘total’ reactors per spatial unit year</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Number of ‘standard’ reactors per spatial unit year</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Number of bTB tests carried out per spatial unit year</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Number of positive interferon gamma test per spatial unit per
+year</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Number of confirmed lesions detected per spatial unit per year</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>The number of new breakdowns confirmed in the last 12 months
+(from end of Quarter 3, 2024)</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>The number of new breakdowns confirmed in the last 3 months (from
+end of Quarter 3, 2024)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
